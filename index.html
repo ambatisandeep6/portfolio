@@ -186,6 +186,26 @@
             <div class="text-xs text-slate-500 mt-12">Ontario, Canada • Designed for Retail Leadership</div>
         </div>
     </footer>
+<!-- Modal Template -->
+<div id="projectModal" class="fixed inset-0 bg-navy/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 shadow-2xl relative">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-navy text-2xl font-bold">&times;</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
 
+<script>
+    function openModal(title, detailText, tags) {
+        document.getElementById('modalContent').innerHTML = `
+            <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">${tags}</span>
+            <h3 class="text-3xl font-extrabold text-navy mt-2 mb-4">${title}</h3>
+            <div class="prose prose-slate max-w-none text-slate-600 space-y-4 leading-relaxed">${detailText}</div>
+        `;
+        document.getElementById('projectModal').classList.remove('hidden');
+    }
+    function closeModal() {
+        document.getElementById('projectModal').classList.add('hidden');
+    }
+</script>
 </body>
 </html>
