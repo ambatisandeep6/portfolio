@@ -194,18 +194,5 @@
     </div>
 </div>
 
-<script>
-    function openModal(title, detailText, tags) {
-        document.getElementById('modalContent').innerHTML = `
-            <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">${tags}</span>
-            <h3 class="text-3xl font-extrabold text-navy mt-2 mb-4">${title}</h3>
-            <div class="prose prose-slate max-w-none text-slate-600 space-y-4 leading-relaxed">${detailText}</div>
-        `;
-        document.getElementById('projectModal').classList.remove('hidden');
-    }
-    function closeModal() {
-        document.getElementById('projectModal').classList.add('hidden');
-    }
-</script>
 </body>
 </html>
