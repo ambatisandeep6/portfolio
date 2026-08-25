@@ -1,198 +1,289 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandeep Kumar Ambati | Retail Operations & Quality Assurance</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#0F172A',
-                        brandBlue: '#2563EB',
-                        softBlue: '#E0F2FE',
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandeep Kumar Ambati | Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #2563eb;
+      --text-color: #334155;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    header {
+      background: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--accent-color);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text {
+      margin-bottom: 1.5rem;
+    }
+
+    .metrics-container {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .metric-badge {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: var(--accent-color);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* Section Styling */
+    section {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    /* Competencies Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+    }
+
+    /* Case Studies & Timeline */
+    .card {
+      border-left: 4px solid var(--accent-color);
+      background: #f8fafc;
+      padding: 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .card h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-meta {
+      font-size: 0.875rem;
+      color: #64748b;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Resume Link Button */
+    .btn-container {
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    @media (max-width: 600px) {
+      .metrics-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-700 font-sans antialiased">
+<body>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-navy tracking-tight">Sandeep Kumar Ambati</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-brandBlue transition">About</a>
-                <a href="#impact" class="hover:text-brandBlue transition">Impact</a>
-                <a href="#projects" class="hover:text-brandBlue transition">Projects</a>
-                <a href="#skills" class="hover:text-brandBlue transition">Skills</a>
-                <a href="#contact" class="hover:text-brandBlue transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+  <div class="container">
 
-    <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20">
-        <span class="text-xs font-bold uppercase tracking-wider text-brandBlue bg-softBlue px-3 py-1 rounded-full">
-            OPEN TO CATEGORY MANAGEMENT • RETAIL OPERATIONS • PROJECT ROLES
-        </span>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-navy mt-6 leading-tight">
-            Turning retail operations into <span class="text-brandBlue">measurable business results.</span>
-        </h1>
-        <p class="text-lg text-slate-600 mt-6 max-w-3xl">
-            Quality Assurance Food Service Specialist with experience managing multi-store retail operations, improving food service execution, reducing waste, increasing sales performance, and building data-driven reporting solutions.
-        </p>
-        
-        <!-- CTA Action Buttons -->
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#projects" class="bg-brandBlue text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition">
-                View Projects
-            </a>
-            <a href="resume.pdf" download="Sandeep_Kumar_Ambati_Resume.pdf" target="_blank" class="inline-flex items-center gap-2 bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 hover:text-navy transition shadow-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-brandBlue">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                </svg>
-                Download Resume
-            </a>
-            <a href="#contact" class="border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition">
-                Let's Connect
-            </a>
-        </div>
+    <!-- HERO SECTION -->
+    <header>
+      <h1>Sandeep Kumar Ambati</h1>
+      <div class="subtitle">Data-Driven Retail Operations & Process Improvement Specialist</div>
+      <p class="hero-text">
+        Lean Six Sigma Green Belt and Master of Industrial Engineering graduate with a proven track record of optimizing performance across 75+ retail locations in Central Canada[cite: 1]. Specializing in multi-store execution, category performance, and inventory optimization using Power BI, Advanced Excel, and SQL[cite: 1].
+      </p>
+      <div class="metrics-container">
+        <div class="metric-badge">🚀 +40% Food Service Sales Growth[cite: 1]</div>
+        <div class="metric-badge">📉 15–20% Waste Reduction[cite: 1]</div>
+        <div class="metric-badge">🏪 75+ Retail Locations Managed[cite: 1]</div>
+      </div>
+      <div class="btn-container">
+        <a href="assets/Sandeep_Resume.pdf" class="btn" target="_blank" download>Download Updated Resume (PDF)</a>
+      </div>
+    </header>
+
+    <!-- CORE COMPETENCIES -->
+    <section>
+      <h2>Core Competencies & Toolkit</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Key Skills & Technologies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Data & Analytics</strong></td>
+            <td>Power BI, Advanced Excel, SQL Basics, Smartsheet Forms, Microsoft & Google Forms[cite: 1]</td>
+          </tr>
+          <tr>
+            <td><strong>Retail & Operations</strong></td>
+            <td>Multi-Unit Management (75+ sites)[cite: 1], Category Support[cite: 1], Merchandising Standards[cite: 1], Inventory Optimization[cite: 1]</td>
+          </tr>
+          <tr>
+            <td><strong>Continuous Improvement</strong></td>
+            <td>Lean Six Sigma Green Belt[cite: 1], Root Cause Analysis[cite: 1], Waste Reduction[cite: 1], SOP Development</td>
+          </tr>
+          <tr>
+            <td><strong>Project Management</strong></td>
+            <td>Project Management Essentials Certified[cite: 1], Cross-Functional Leadership[cite: 1], Store Openings & Remodels[cite: 1]</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- Impact Section -->
-    <section id="impact" class="bg-white py-16 border-y border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-8">Retail Footprint & Achievements</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="border-l-4 border-brandBlue pl-4">
-                    <div class="text-3xl md:text-4xl font-extrabold text-navy">75+</div>
-                    <div class="text-sm font-semibold text-slate-800 mt-1">Stores Managed</div>
-                    <div class="text-xs text-slate-500 mt-1">Managed food service execution across Ontario locations.</div>
-                </div>
-                <div class="border-l-4 border-brandBlue pl-4">
-                    <div class="text-3xl md:text-4xl font-extrabold text-navy">40%</div>
-                    <div class="text-sm font-semibold text-slate-800 mt-1">Sales Growth</div>
-                    <div class="text-xs text-slate-500 mt-1">Contributed to improved execution & merchandising performance.</div>
-                </div>
-                <div class="border-l-4 border-brandBlue pl-4">
-                    <div class="text-3xl md:text-4xl font-extrabold text-navy">15–20%</div>
-                    <div class="text-sm font-semibold text-slate-800 mt-1">Waste Reduction</div>
-                    <div class="text-xs text-slate-500 mt-1">Improved food handling & operational consistency.</div>
-                </div>
-                </div>
-            </div>
-        </div>
+    <!-- CASE STUDIES -->
+    <section>
+      <h2>Featured Operations Case Studies</h2>
+
+      <div class="card">
+        <h3>Case Study 1: Regional Sales Growth & Waste Reduction</h3>
+        <div class="card-meta">Circle K — Central Canada[cite: 1]</div>
+        <p><strong>Objective:</strong> Address stagnant store performance and high food waste across 75 high-volume retail locations[cite: 1].</p>
+        <ul>
+          <li><strong>Action:</strong> Built custom performance dashboards in Power BI and Excel to track store inventory and waste patterns[cite: 1].</li>
+          <li><strong>Action:</strong> Audited underperforming stores, identified root causes, and coached district/store managers on execution[cite: 1].</li>
+          <li><strong>Impact:</strong> Generated a ~40% increase in food service sales and achieved 15–20% sustained waste reduction[cite: 1].</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Case Study 2: Operations & Data-Driven Reporting Architecture</h3>
+        <div class="card-meta">Circle K — Central Canada[cite: 1]</div>
+        <p><strong>Objective:</strong> Standardize field audit data collection and streamline operational execution reporting[cite: 1].</p>
+        <ul>
+          <li><strong>Action:</strong> Designed end-to-end data pipelines using Smartsheet and Microsoft Forms to capture field audit data in real-time[cite: 1].</li>
+          <li><strong>Action:</strong> Integrated data inputs directly into central Power BI reports for executive tracking[cite: 1].</li>
+          <li><strong>Impact:</strong> Accelerated corrective action planning and provided regional leadership with real-time site insights[cite: 1].</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
-        <div class="mb-10">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-brandBlue mb-2">Featured Work</h2>
-            <h3 class="text-3xl font-extrabold text-navy">Business Case Studies</h3>
-        </div>
+    <!-- PROFESSIONAL TIMELINE -->
+    <section>
+      <h2>Professional Experience</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Case Study 1 -->
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Analytics • Power BI • Field Operations</span>
-                <h4 class="text-2xl font-bold text-navy mt-3 mb-4">Retail Operational Performance & Field Analytics Dashboard</h4>
-                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                    Centralized multi-store field audit data (planogram compliance, food safety scores, and sampling initiatives) across 75+ locations into an automated Power BI dashboard, reducing weekly reporting lead time to near real-time.
-                </p>
-                <div class="border-t border-slate-100 pt-4 flex justify-between text-xs text-slate-500 font-medium">
-                    <span>• Power BI & Excel</span>
-                    <span>• Automated Workflows</span>
-                    <span>• Audit Tracking</span>
-                </div>
-            </div>
+      <div class="card">
+        <h3>Food Service Specialist</h3>
+        <div class="card-meta">Circle K (Central Canada, Toronto, ON) | July 2024 – August 2026[cite: 1]</div>
+        <ul>
+          <li>Oversee food service operations, merchandising standards, and inventory management across 75 retail locations[cite: 1].</li>
+          <li>Analyze store data in Power BI and Excel to identify growth opportunities, operational gaps, and waste trends[cite: 1].</li>
+          <li>Support new store openings, product rollouts, and training for district and store managers[cite: 1].</li>
+        </ul>
+      </div>
 
-            <!-- Case Study 2 -->
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                <span class="text-xs font-bold text-brandBlue uppercase tracking-wider">Quality Assurance • Process Improvement</span>
-                <h4 class="text-2xl font-bold text-navy mt-3 mb-4">Multi-Store Food Service Execution & Waste Reduction</h4>
-                <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                    Standardized food prep controls, training resources, and store auditing protocols. Reduced food waste by 15–20%.
-                </p>
-                <div class="border-t border-slate-100 pt-4 flex justify-between text-xs text-slate-500 font-medium">
-                    <span>• HACCP & EcoSure</span>
-                    <span>• 15–20% Waste Cut</span>
-                    <span>• SOP Development</span>
-                </div>
-            </div>
-        </div>
+      <div class="card">
+        <h3>Retail Sales Supervisor</h3>
+        <div class="card-meta">Circle K (Windsor, ON) | June 2022 – June 2024[cite: 1]</div>
+        <ul>
+          <li>Supervised daily store operations, employee scheduling, customer service, and policy compliance[cite: 1].</li>
+          <li>Managed inventory replenishment, stock control, and team onboarding[cite: 1].</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-white py-20 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-navy mb-10">Categorized Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-navy mb-3">Analytics</h3>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li>• Power BI</li>
-                        <li>• Advanced Excel</li>
-                        <li>• SQL Basics</li>
-                        <li>• Smartsheet & Forms</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-navy mb-3">Retail</h3>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li>• Category Support</li>
-                        <li>• Merchandising</li>
-                        <li>• Store Operations</li>
-                        <li>• Inventory Management</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-navy mb-3">Quality</h3>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li>• HACCP Compliance</li>
-                        <li>• EcoSure Standards</li>
-                        <li>• Food Safety Audits</li>
-                        <li>• Quality Control</li>
-                    </ul>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-navy mb-3">Management</h3>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li>• Lean Six Sigma Green Belt</li>
-                        <li>• Project Management</li>
-                        <li>• Multi-Store Training</li>
-                        <li>• Continuous Improvement</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section>
+      <h2>Education & Credentials</h2>
+      <ul>
+        <li><strong>Master of Engineering (M.Eng.) – Industrial Engineering</strong> — University of Windsor, Canada[cite: 1]</li>
+        <li><strong>Bachelor of Technology (B.Tech.) – Mechanical Engineering</strong> — BVRIT, India[cite: 1]</li>
+        <li><strong>Lean Six Sigma Green Belt</strong> — Binghamton University, USA[cite: 1]</li>
+        <li><strong>Project Management Essentials</strong> — Management and Strategy Institute[cite: 1]</li>
+        <li><strong>Power BI Essential Training</strong> — LinkedIn Learning[cite: 1]</li>
+      </ul>
     </section>
 
-    <!-- Contact Section -->
-    <footer id="contact" class="bg-navy text-white py-16">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-            <p class="text-slate-400 max-w-lg mx-auto mb-8">
-                Interested in retail operations, category management, quality systems, analytics, or project collaboration? I'd be happy to connect.
-            </p>
-            <div class="flex justify-center space-x-6 text-sm font-medium">
-                <a href="https://www.linkedin.com/in/sandeep-kumar-ambati/" target="_blank" class="bg-brandBlue px-6 py-3 rounded-lg hover:bg-blue-600 transition">LinkedIn Profile</a>
-                <a href="mailto:ambatisandeep6@gmail.com" class="border border-slate-600 px-6 py-3 rounded-lg hover:bg-slate-800 transition">Direct Email</a>
-            </div>
-            <div class="text-xs text-slate-500 mt-12">Ontario, Canada • Designed for Retail Leadership</div>
-        </div>
-    </footer>
-<!-- Modal Template -->
-<div id="projectModal" class="fixed inset-0 bg-navy/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 shadow-2xl relative">
-        <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-navy text-2xl font-bold">&times;</button>
-        <div id="modalContent"></div>
-    </div>
-</div>
+  </div>
 
 </body>
 </html>
