@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sandeep Kumar Ambati | Operations & Analytics</title>
+  <title>Sandeep Kumar Ambati | Operations & Analytics Showcase</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
@@ -36,11 +36,52 @@
       padding: 0 1.5rem;
     }
 
+    /* Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 100;
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
     /* Hero Section */
     .hero {
-      padding: 5rem 0 3rem;
+      padding: 4rem 0 3rem;
       display: grid;
-      grid-template-columns: 1fr 320px;
+      grid-template-columns: 1fr 300px;
       gap: 2.5rem;
       align-items: center;
     }
@@ -60,7 +101,7 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
@@ -70,7 +111,7 @@
     }
 
     .hero-tagline {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
       margin-bottom: 1.5rem;
     }
@@ -103,19 +144,22 @@
       border: 1px solid var(--card-border);
       backdrop-filter: blur(12px);
       border-radius: 16px;
-      padding: 1.5rem;
+      padding: 1.25rem;
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      text-align: center;
     }
 
     .avatar-img {
       width: 100%;
-      height: 220px;
+      height: 320px;
       object-fit: cover;
+      object-position: top;
       border-radius: 12px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--card-border);
     }
 
-    /* Metric Grid */
+    /* Metric Bar */
     .metrics-bar {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -144,10 +188,14 @@
     }
 
     /* Section Styling */
+    section {
+      padding-top: 2rem;
+    }
+
     .section-title {
       font-size: 1.75rem;
       font-weight: 700;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -155,6 +203,15 @@
 
     .section-title i {
       color: var(--accent);
+    }
+
+    /* About Section */
+    .about-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 2rem;
+      border-radius: 16px;
+      margin-bottom: 4rem;
     }
 
     /* Showcase Cards (Case Studies) */
@@ -215,7 +272,7 @@
       font-size: 0.8rem;
     }
 
-    /* Tech Stack Pills */
+    /* Skills Grid */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -226,14 +283,85 @@
     .skill-box {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      padding: 1.25rem;
+      padding: 1.5rem;
       border-radius: 12px;
     }
 
     .skill-box h3 {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--accent);
       margin-bottom: 0.75rem;
+    }
+
+    /* Experience Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .timeline-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 1.75rem;
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .company-name {
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+
+    .date-badge {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact Section */
+    .contact-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-item {
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-item:hover {
+      color: var(--accent);
     }
 
     /* Responsive */
@@ -244,6 +372,9 @@
       .metrics-bar {
         grid-template-columns: 1fr;
       }
+      .nav-links {
+        display: none;
+      }
       h1 {
         font-size: 2.2rem;
       }
@@ -252,13 +383,27 @@
 </head>
 <body>
 
+  <!-- STICKY NAVBAR -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">Sandeep Ambati</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#skills">Competencies</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="container">
 
     <!-- HERO SHOWCASE -->
     <header class="hero">
       <div>
         <div class="hero-badge">
-          <i class="fa-solid fa-bolt"></i> Lean Six Sigma Green Belt Specialist
+          <i class="fa-solid fa-shield-halved"></i> Lean Six Sigma Green Belt Specialist[cite: 1]
         </div>
         <h1>Sandeep Kumar Ambati</h1>
         <p class="hero-tagline">
@@ -266,16 +411,16 @@
         </p>
         <div class="hero-buttons">
           <a href="assets/Sandeep_Resume.pdf" class="btn-primary" download target="_blank">
-            <i class="fa-solid fa-file-arrow-down"></i> Get Resume (PDF)
+            <i class="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)
           </a>
         </div>
       </div>
 
-      <!-- VISUAL HEADER CARD -->
+      <!-- PROFILE PHOTO CARD -->
       <div class="hero-card">
-        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Data Dashboard Visual" class="avatar-img">
-        <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
-          <i class="fa-solid fa-graduation-cap"></i> M.Eng. Industrial Engineering | University of Windsor[cite: 1]
+        <img src="images/profile.png" alt="Sandeep Kumar Ambati Professional Headshot" class="avatar-img">
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          <i class="fa-solid fa-graduation-cap"></i> M.Eng. Industrial Engineering[cite: 1]
         </p>
       </div>
     </header>
@@ -284,7 +429,7 @@
     <div class="metrics-bar">
       <div class="metric-card">
         <div class="metric-number">75+</div>
-        <div class="metric-label">Retail Locations Managed[cite: 1]</div>
+        <div class="metric-label">Retail Locations Supported[cite: 1]</div>
       </div>
       <div class="metric-card">
         <div class="metric-number">+40%</div>
@@ -296,64 +441,135 @@
       </div>
     </div>
 
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2 class="section-title"><i class="fa-solid fa-user"></i> About Me</h2>
+      <div class="about-box">
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">
+          Results-driven Retail Operations and Food Service Specialist with expertise in managing multi-store execution across 75 retail locations in Central Canada[cite: 1]. Combining an Industrial Engineering foundation with continuous improvement methodologies (Lean Six Sigma Green Belt), I bridge the gap between complex field operations and executive analytics[cite: 1].
+        </p>
+        <p style="color: var(--text-muted);">
+          My work centers around optimizing stock control, building automated field reporting pipelines, and implementing standardized merchandising frameworks that directly fuel revenue growth and waste reduction[cite: 1].
+        </p>
+      </div>
+    </section>
+
     <!-- FEATURED OPERATIONS CASE STUDIES -->
-    <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Operational Highlights</h2>
-    <div class="grid-2">
-      
-      <!-- Card 1 -->
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Retail Operations" class="project-img">
-        <div class="project-body">
-          <div class="project-title">Regional Waste Reduction & Sales Growth[cite: 1]</div>
-          <div class="project-desc">
-            Directed food service operations across 75 sites[cite: 1]. Developed data tracking models to minimize product waste while maximizing store stock availability[cite: 1].
-          </div>
-          <div class="tech-tags">
-            <span class="tag">Power BI[cite: 1]</span>
-            <span class="tag">Excel[cite: 1]</span>
-            <span class="tag">Lean Six Sigma[cite: 1]</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Analytics Architecture" class="project-img">
-        <div class="project-body">
-          <div class="project-title">Real-Time Field Reporting Architecture[cite: 1]</div>
-          <div class="project-desc">
-            Engineered automated data collection workflows connecting field audits directly to executive dashboard analytics[cite: 1].
-          </div>
-          <div class="tech-tags">
-            <span class="tag">Smartsheet[cite: 1]</span>
-            <span class="tag">SQL[cite: 1]</span>
-            <span class="tag">Microsoft Forms[cite: 1]</span>
+    <section id="case-studies">
+      <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Operational Case Studies</h2>
+      <div class="grid-2">
+        
+        <!-- Case Study 1 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Retail Operations" class="project-img">
+          <div class="project-body">
+            <div class="project-title">Regional Waste Reduction & Growth[cite: 1]</div>
+            <div class="project-desc">
+              Directed operational execution across 75 high-volume stores[cite: 1]. Designed predictive inventory tracking models to decrease waste while maintaining optimal product availability[cite: 1].
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Power BI[cite: 1]</span>
+              <span class="tag">Excel[cite: 1]</span>
+              <span class="tag">Lean Six Sigma[cite: 1]</span>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+        <!-- Case Study 2 -->
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Analytics Architecture" class="project-img">
+          <div class="project-body">
+            <div class="project-title">Field Audit Data Architecture[cite: 1]</div>
+            <div class="project-desc">
+              Engineered end-to-end data pipelines using Smartsheet and Microsoft Forms to stream real-time field audit metrics straight to central dashboards[cite: 1].
+            </div>
+            <div class="tech-tags">
+              <span class="tag">Smartsheet[cite: 1]</span>
+              <span class="tag">SQL[cite: 1]</span>
+              <span class="tag">Microsoft Forms[cite: 1]</span>
+            </div>
+          </div>
+        </div>
 
-    <!-- TECH TOOLKIT GRID -->
-    <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Technical Competencies</h2>
-    <div class="skills-grid">
-      <div class="skill-box">
-        <h3>Analytics & Data</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">Power BI, Advanced Excel, SQL Basics, Smartsheet Forms[cite: 1]</p>
       </div>
-      <div class="skill-box">
-        <h3>Retail Management</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">Multi-Store Support (75+ units), Category Support, Inventory Control[cite: 1]</p>
+    </section>
+
+    <!-- TECHNICAL COMPETENCIES GRID -->
+    <section id="skills">
+      <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Analytics & Business Intelligence</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Power BI, Advanced Excel, SQL Basics, Smartsheet Forms, Dashboard Architecture[cite: 1]</p>
+        </div>
+        <div class="skill-box">
+          <h3>Retail & Multi-Unit Operations</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Multi-Store Management (75+ units), Category Support, Inventory Control, Merchandising[cite: 1]</p>
+        </div>
+        <div class="skill-box">
+          <h3>Process Improvement</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Lean Six Sigma Green Belt, Root Cause Analysis, Waste Reduction, SOP Development[cite: 1]</p>
+        </div>
+        <div class="skill-box">
+          <h3>Project & Leadership</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Project Management Essentials, Cross-Functional Team Leadership, Store Openings & Remodels[cite: 1]</p>
+        </div>
       </div>
-      <div class="skill-box">
-        <h3>Process Improvement</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">Lean Six Sigma Green Belt, Root Cause Analysis, SOP Development[cite: 1]</p>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience">
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience Timeline</h2>
+      <div class="timeline">
+        
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <div class="role-title">Food Service Specialist</div>
+              <div class="company-name">Circle K — Central Canada, Toronto, ON[cite: 1]</div>
+            </div>
+            <span class="date-badge">July 2024 – August 2026[cite: 1]</span>
+          </div>
+          <ul style="color: var(--text-muted); padding-left: 1.25rem; font-size: 0.95rem;">
+            <li>Supervise food service operations, program execution, and inventory standards across 75 store locations[cite: 1].</li>
+            <li>Construct analytical dashboards in Excel and Power BI to monitor sales opportunities, reduce waste, and evaluate district performance[cite: 1].</li>
+            <li>Collaborate with Category Managers, District Managers, and vendors on product launches and promotional execution[cite: 1].</li>
+          </ul>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <div class="role-title">Retail Sales Supervisor</div>
+              <div class="company-name">Circle K — Windsor, ON[cite: 1]</div>
+            </div>
+            <span class="date-badge">June 2022 – June 2024[cite: 1]</span>
+          </div>
+          <ul style="color: var(--text-muted); padding-left: 1.25rem; font-size: 0.95rem;">
+            <li>Managed daily store execution, staff scheduling, policy compliance, and frontline service standards[cite: 1].</li>
+            <li>Supervised stock replenishment, receiving, inventory control, and onboarding for new employees[cite: 1].</li>
+          </ul>
+        </div>
+
       </div>
-      <div class="skill-box">
-        <h3>Project Delivery</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">Project Management Essentials, Cross-Functional Team Support[cite: 1]</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="contact-box">
+        <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Let's Connect</h2>
+        <p style="color: var(--text-muted);">Interested in collaborating or discussing retail operations and analytics?</p>
+        
+        <div class="contact-links">
+          <a href="mailto:ambatisandeep6@gmail.com" class="contact-item">
+            <i class="fa-solid fa-envelope"></i> ambatisandeep6@gmail.com[cite: 1]
+          </a>
+          <a href="tel:+19573840562" class="contact-item">
+            <i class="fa-solid fa-phone"></i> +91-9573840562[cite: 1]
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
   </div>
 
